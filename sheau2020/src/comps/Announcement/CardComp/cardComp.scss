@@ -1,0 +1,28 @@
+.cardComp{
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    width: 500px;
+    border: 1px solid grey;
+    border-radius: 15px;
+}
+
+.cardLeft{
+    flex:1;
+}
+
+.cardRight{
+    display: flex;
+    flex:3;
+    flex-direction: column;
+    background-color: white;
+    color: navy;
+    border-radius: 10px;
+    overflow-y: scroll;
+    margin: 15px;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row-reverse;
+}
