@@ -1,0 +1,17 @@
+.details{
+    display: flex;
+    flex-direction: row;
+}
+
+.user{ 
+    padding-right: 10px;
+}
+
+.time{
+    color: grey;
+}
+
+.messages{
+    background-color: white;
+    min-height: 50px;
+}

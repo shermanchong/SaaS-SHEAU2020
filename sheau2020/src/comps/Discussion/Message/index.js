@@ -1,22 +1,20 @@
 import React from 'react'
-import But from '../../But'
-import DatePicker from 'react-date-picker'
-import Content from '../CardComp/Content'
+import But from '../../But/index'
 
-function CardComp({ buttons, di }) {
-
-
-
+function Message({ buttons }) {
     return (
+
         <div class="cardComp">
-            <DatePicker class="cardLeft" />
+            <img class="cardLeft"></img>
             <div class="cardRight">
-               
-                <div class="displayCont">
-                    {di.map((o, i) => {
-                        return <Content {...o} />
-                    })}
+                <div class="details">
+                    <div class="user">Anna</div>
+                    <div class="time">20 Hours Ago</div>
                 </div>
+                <div class="messages">
+
+                </div>
+
                 <div className="buttons">
                     {buttons.map((o, i) => {
                         return <But {...o} />
@@ -25,19 +23,20 @@ function CardComp({ buttons, di }) {
 
             </div>
         </div>
-
     )
-
-
 }
 
-CardComp.defaultProps = {
+Message.defaultProps = {
     buttons: [
         {
-            buttonText: "Button 1",
-            active: true,
-
+            buttonText: 'reply',
+            OnClick: () => { alert('replies') },
         },
+        {
+
+            buttonText: "Preview",
+            OnClick: () => { alert('Previews') },
+        }
 
     ],
 
@@ -49,4 +48,7 @@ CardComp.defaultProps = {
         }
     ]
 }
-export default CardComp;
+
+export default Message;
+
+

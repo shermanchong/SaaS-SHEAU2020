@@ -11,7 +11,9 @@ export default {
 }
 
 export const DefaultCardComp = () => {
-    return <CardComp />
+    return <CardComp
+        
+    />
 
 }
 

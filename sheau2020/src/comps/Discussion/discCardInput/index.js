@@ -1,22 +1,16 @@
 import React from 'react'
 import But from '../../But'
-import DatePicker from 'react-date-picker'
-import Content from '../CardComp/Content'
 
-function CardComp({ buttons, di }) {
+function DiscCardInput({ buttons, di }) {
 
 
 
     return (
         <div class="cardComp">
-            <DatePicker class="cardLeft" />
+            <img class="cardLeft"></img>
             <div class="cardRight">
-               
-                <div class="displayCont">
-                    {di.map((o, i) => {
-                        return <Content {...o} />
-                    })}
-                </div>
+                <input class="header" placeholder="Got a Question?"></input>
+                
                 <div className="buttons">
                     {buttons.map((o, i) => {
                         return <But {...o} />
@@ -31,7 +25,7 @@ function CardComp({ buttons, di }) {
 
 }
 
-CardComp.defaultProps = {
+DiscCardInput.defaultProps = {
     buttons: [
         {
             buttonText: "Button 1",
@@ -49,4 +43,4 @@ CardComp.defaultProps = {
         }
     ]
 }
-export default CardComp;
+export default DiscCardInput;
