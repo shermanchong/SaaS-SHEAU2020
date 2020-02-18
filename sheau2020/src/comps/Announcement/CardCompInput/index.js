@@ -3,31 +3,17 @@ import But from '../../But'
 import DatePicker from 'react-date-picker'
 import Content from '../CardComp/Content'
 
-function CardComp({ buttons, di }) {
+function CardCompInput({ buttons, di }) {
 
-    var cont = 'contents';
-    var disp = 'hideCont';
-    var head = 'header';
    
-
-    if (di) {
-        cont = 'hideCont';
-        disp = 'displayCont';
-        head = 'header hideCont'
-       
-    }
 
     return (
         <div class="cardComp">
             <DatePicker class="cardLeft" />
             <div class="cardRight">
-                <input class={head}></input>
-                <textarea class={cont}></textarea>
-                <div class={disp}>
-                    {di.map((o, i) => {
-                        return <Content {...o} />
-                    })}
-                </div>
+                <input class="header" placeholder="Title"></input>
+                <textarea class="contents" placeholder="Message"></textarea>
+               
                 <div className="buttons">
                     {buttons.map((o, i) => {
                         return <But {...o} />
@@ -42,7 +28,7 @@ function CardComp({ buttons, di }) {
 
 }
 
-CardComp.defaultProps = {
+CardCompInput.defaultProps = {
     buttons: [
         {
             buttonText: "Button 1",
@@ -60,4 +46,4 @@ CardComp.defaultProps = {
         }
     ]
 }
-export default CardComp;
+export default CardCompInput;

@@ -18,11 +18,36 @@
     background-color: white;
     color: navy;
     border-radius: 10px;
-    overflow-y: scroll;
     margin: 15px;
 }
 
 .buttons{
     display: flex;
     flex-direction: row-reverse;
+    margin: 5px;
+}
+
+.header{
+    background-color: lightgrey;
+    margin: 5px;
+    border-radius: 5px;
+    height: 25px;
+
+}
+
+.contents{
+    background-color: lightgrey;
+    margin: 5px;
+    height: 75px;
+    border-radius: 5px;
+
+}
+
+.hideCont{
+    display: none;
+}
+
+.displayCont{
+    display: flex;
+    overflow-y: scroll;
 }

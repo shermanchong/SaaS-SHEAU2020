@@ -2,6 +2,7 @@ import React from 'react';
 import '../App.scss';
 
 import CardComp from '../comps/Announcement/CardComp';
+import CardCompInput from '../comps/Announcement/CardCompInput';
 
 export default {
     title: "CardComp",
@@ -11,11 +12,19 @@ export default {
 
 export const DefaultCardComp = () => {
     return <CardComp />
+
 }
 
-export const CardCompInput = () => {
-    return <CardComp 
+export const DefaultCardCompInput = () => {
+    return <CardCompInput 
         buttons = {buttons}
+    />
+}
+
+export const CardCompDisplay = () => {
+    return <CardComp 
+        buttons = {displayBut} 
+        di = {display}
     />
 }
 
@@ -31,4 +40,21 @@ var buttons = [
         
     },
     
+]
+
+var displayBut = [
+    {
+        buttonText:"+",
+        OnClick:()=>{alert('OpensInput')},
+        display: true,
+        
+    }
+]
+
+var display = [
+    {
+        display: false,
+        dispText: "Field trip Tomorrow!",
+        dispContent: "Please bring for ...."
+    }
 ]
