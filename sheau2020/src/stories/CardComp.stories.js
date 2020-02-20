@@ -18,8 +18,8 @@ export const DefaultCardComp = () => {
 }
 
 export const DefaultCardCompInput = () => {
-    return <CardCompInput 
-        buttons = {buttons}
+    return <CardComp 
+        input = {buttons}
     />
 }
 
@@ -40,6 +40,7 @@ var buttons = [
         buttonText: "Preview",
         OnClick:()=>{alert('Previews')},
         
+        
     },
     
 ]
@@ -54,6 +55,11 @@ var displayBut = [
 ]
 
 var display = [
+    {
+        display: false,
+        dispText: "Field trip Tomorrow!",
+        dispContent: "Please bring for ...."
+    },
     {
         display: false,
         dispText: "Field trip Tomorrow!",

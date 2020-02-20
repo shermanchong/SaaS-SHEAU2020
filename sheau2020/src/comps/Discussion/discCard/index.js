@@ -7,7 +7,8 @@ function DiscCard({ buttons, di }) {
 
 
     return (
-        <div class="cardComp">
+        <div class="discComp">
+           <Message/>
            <Message/>
         </div>
 

@@ -1,3 +1,14 @@
+.discComp{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    width: 650px;
+    border: 1px solid grey;
+    border-radius: 15px;
+    padding: 50px;
+    min-height: 500px;
+}
+
 .details{
     display: flex;
     flex-direction: row;
@@ -14,4 +25,22 @@
 .messages{
     background-color: white;
     min-height: 50px;
+    padding: 15px;
+}
+
+.question{
+    background-color: #FBFAFA;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    min-height: 25px;
+}
+
+.thread{
+    display: flex;
+    width: 450px;
+    padding: 0px;
+    border-radius: 5px;
+    min-height: 20px;
+    border: 1px solid lightgrey;
 }

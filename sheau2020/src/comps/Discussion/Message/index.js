@@ -4,15 +4,17 @@ import But from '../../But/index'
 function Message({ buttons }) {
     return (
 
-        <div class="cardComp">
-            <img class="cardLeft"></img>
+        <div class="thread">
+            <div class="cardLeft">
+                <img></img>
+            </div>
             <div class="cardRight">
                 <div class="details">
                     <div class="user">Anna</div>
                     <div class="time">20 Hours Ago</div>
                 </div>
                 <div class="messages">
-
+                    How long would the kids be outdoors for? Would they need to pack sunscreen?
                 </div>
 
                 <div className="buttons">

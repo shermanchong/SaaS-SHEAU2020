@@ -2,23 +2,46 @@
     display: flex;
     flex-direction: row;
     padding: 30px;
-    width: 500px;
+    width: 650px;
     border: 1px solid grey;
     border-radius: 15px;
+    padding: 50px;
 }
 
 .cardLeft{
     flex:1;
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+    color: #324476;
+    
+}
+
+.month{
+    font-size: 25px;
+}
+
+.day{
+    font-size: 75px;
 }
 
 .cardRight{
     display: flex;
-    flex:3;
+    flex:4;
     flex-direction: column;
     background-color: white;
-    color: navy;
+    color: #324476;
     border-radius: 10px;
     margin: 15px;
+}
+.cardRightD{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#calendar{
+    height: 50%;
 }
 
 .buttons{
@@ -28,19 +51,25 @@
 }
 
 .header{
-    background-color: lightgrey;
+    background-color: #F4DD8F;
+    color: #324476;
     margin: 5px;
     border-radius: 5px;
     height: 25px;
+    padding: 5px;
 
 }
 
 .contents{
-    background-color: lightgrey;
     margin: 5px;
-    height: 75px;
+    min-height: 50px;
     border-radius: 5px;
+    padding: 10px;
 
+}
+
+.title{
+    font-size: 25px;
 }
 
 .hideCont{
@@ -50,4 +79,6 @@
 .displayCont{
     display: flex;
     overflow-y: scroll;
+    flex-direction: column;
+    height: 250px;
 }

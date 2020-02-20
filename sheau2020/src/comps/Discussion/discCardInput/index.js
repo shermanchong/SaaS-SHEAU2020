@@ -7,9 +7,11 @@ function DiscCardInput({ buttons, di }) {
 
     return (
         <div class="cardComp">
-            <img class="cardLeft"></img>
+            <div class="cardLeft">
+                <img></img>
+            </div>
             <div class="cardRight">
-                <input class="header" placeholder="Got a Question?"></input>
+                <input class="question" placeholder="Got a Question?"></input>
                 
                 <div className="buttons">
                     {buttons.map((o, i) => {

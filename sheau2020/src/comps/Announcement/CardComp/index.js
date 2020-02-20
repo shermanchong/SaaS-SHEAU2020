@@ -1,32 +1,88 @@
 import React from 'react'
 import But from '../../But'
-import DatePicker from 'react-date-picker'
+import DatePicker from 'react-date-picker/dist/entry.nostyle'
 import Content from '../CardComp/Content'
 
-function CardComp({ buttons, di }) {
 
 
+function CardComp({ buttons, di, input }) {
 
-    return (
-        <div class="cardComp">
-            <DatePicker class="cardLeft" />
-            <div class="cardRight">
-               
-                <div class="displayCont">
-                    {di.map((o, i) => {
-                        return <Content {...o} />
-                    })}
+    if (di) {
+
+        return (
+            <div class="cardComp">
+                <div class='cardLeft'>
+                    <div class="month">January</div>
+                    <div class="day">27</div>
+                    
                 </div>
-                <div className="buttons">
-                    {buttons.map((o, i) => {
-                        return <But {...o} />
-                    })}
-                </div>
+                <div class="cardRight">
 
+                    <div class="displayCont">
+                        {di.map((o, i) => {
+                            return <Content {...o} />
+                        })}
+                    </div>
+
+                    <div className="buttons">
+                        {buttons.map((o, i) => {
+                            return <But {...o} />
+                        })}
+                    </div>
+
+                </div>
             </div>
-        </div>
 
-    )
+        )
+
+
+
+    } else if (input) {
+        return (
+
+            <div class="cardComp">
+               <div class='cardLeft'>
+                    <div class="month">January</div>
+                    <div class="day">27</div>
+                    
+                </div>
+                <div class="cardRight">
+                    <input class="header" placeholder="Title"></input>
+                    <textarea class="contents" placeholder="Message"></textarea>
+
+                    <div className="buttons">
+                        {input.map((o, i) => {
+                            return <But {...o} />
+                        })}
+                    </div>
+
+                </div>
+            </div>
+        )
+    }
+
+    else {
+        return (
+            <div class="cardComp">
+               <div class='cardLeft'>
+                    <div class="month">January</div>
+                    <div class="day">27</div>
+                    
+                </div>
+                <div class="cardRight cardRightD">
+
+                    <div class="title">Make an Announcement</div>
+                    <div className="buttons">
+                        {buttons.map((o, i) => {
+                            return <But {...o} />
+                        })}
+                    </div>
+
+                </div>
+            </div>
+        )
+    }
+
 
 
 }
@@ -34,19 +90,14 @@ function CardComp({ buttons, di }) {
 CardComp.defaultProps = {
     buttons: [
         {
-            buttonText: "Button 1",
-            active: true,
+            buttonText: "+",
+            display: true
 
         },
 
     ],
 
-    di: [
-        {
-            display: false,
-            dispText: "Field trip Tomorrow!",
-            dispContent: "Please bring the following...",
-        }
-    ]
+
+   
 }
 export default CardComp;
