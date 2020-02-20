@@ -14,14 +14,6 @@ function Content({ di, dispText, dispContent }) {
 }
 
 
-Content.defaultProps = {
-    di: [
-        {
-            display: false,
-            dispText: "Field trip Tomorrow!",
-            dispContent: "Please bring the following...",
-        }
-    ]
-}
+
 
 export default Content;

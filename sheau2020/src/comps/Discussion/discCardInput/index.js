@@ -8,7 +8,7 @@ function DiscCardInput({ buttons, di }) {
     return (
         <div class="cardComp">
             <div class="cardLeft">
-                <img></img>
+                <img ></img>
             </div>
             <div class="cardRight">
                 <input class="question" placeholder="Got a Question?"></input>

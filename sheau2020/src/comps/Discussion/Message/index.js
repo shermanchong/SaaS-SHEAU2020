@@ -1,52 +1,52 @@
 import React from 'react'
 import But from '../../But/index'
 
-function Message({ buttons }) {
+function Message({ buttons, name, time, reply, threads }) {
     return (
-
-        <div class="thread">
-            <div class="cardLeft">
-                <img></img>
-            </div>
-            <div class="cardRight">
-                <div class="details">
-                    <div class="user">Anna</div>
-                    <div class="time">20 Hours Ago</div>
+        <div class="threadCont">
+            <div class="thread">
+                <div class="cardLeft">
+                    <img src="sheau2020\src\images\message.jpg" />
                 </div>
-                <div class="messages">
-                    How long would the kids be outdoors for? Would they need to pack sunscreen?
-                </div>
-
-                <div className="buttons">
-                    {buttons.map((o, i) => {
-                        return <But {...o} />
-                    })}
+                <div class="cardRight">
+                    <div class="details">
+                        <div class="user">{name}</div>
+                        <div class="time">{time}</div>
+                    </div>
+                    <div class="messages">
+                        {reply}
                 </div>
 
+                    <div className="buttons">
+                        {buttons.map((o, i) => {
+                            return <But {...o} />
+                        })}
+                    </div>
+
+                </div>
             </div>
         </div>
+
     )
 }
 
 Message.defaultProps = {
     buttons: [
-        {
-            buttonText: 'reply',
-            OnClick: () => { alert('replies') },
-        },
+
         {
 
-            buttonText: "Preview",
-            OnClick: () => { alert('Previews') },
-        }
+            buttonText: "Like",
+            OnClick: () => { alert('Like') },
+        }, {
+            buttonText: 'Reply',
+            OnClick: () => { alert('replies') },
+        },
 
     ],
 
-    di: [
+    threads: [
         {
-            display: false,
-            dispText: "Field trip Tomorrow!",
-            dispContent: "Please bring the following...",
+           
         }
     ]
 }

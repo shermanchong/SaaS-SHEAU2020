@@ -35,6 +35,18 @@
     border-radius: 5px;
     min-height: 25px;
 }
+.threadCont{
+    width: 650px;
+    display: flex;
+    flex-direction: row;
+}
+
+.threadReply{
+    width: 650px;
+    display: flex;
+    flex-direction: row-reverse;
+    border-left: solid 3px #324476;
+}
 
 .thread{
     display: flex;
@@ -43,4 +55,9 @@
     border-radius: 5px;
     min-height: 20px;
     border: 1px solid lightgrey;
+    margin: 5px;
+}
+
+.alignRight{
+    width: 50%;
 }

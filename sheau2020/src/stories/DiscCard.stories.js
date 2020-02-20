@@ -14,6 +14,24 @@ export const DefaultDiscCompInput = () => {
 
 export const DefaultDiscComp = () => {
      return <DiscCard
+          threads={threads}
      />
 }
 
+
+
+var threads = [
+     {
+          name: "Anna",
+          time: "20 hours ago",
+          reply: "How long would the kids be outdoors for? Would they need to pack sunscreen?",
+          right: false
+     },
+     {
+          name: "Steve",
+          time: "5 hours ago",
+          reply: "Yes please bring sunscreen!",
+          right: true
+     },
+
+]

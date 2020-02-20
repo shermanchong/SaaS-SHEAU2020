@@ -2,14 +2,15 @@ import React from 'react'
 import But from '../../But'
 import Message from '../Message/index'
 
-function DiscCard({ buttons, di }) {
+function DiscCard({ buttons, threads }) {
 
 
 
     return (
         <div class="discComp">
-           <Message/>
-           <Message/>
+             {threads.map((o, i) => {
+                        return <Message {...o} />
+                    })}
         </div>
 
     )
