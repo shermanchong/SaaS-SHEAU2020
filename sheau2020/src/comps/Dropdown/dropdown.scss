@@ -1,0 +1,73 @@
+$w: 150px;
+
+$f: 12px;
+$m: 2px;
+
+#item_cont{
+    overflow-y: scroll;
+}
+
+.menu_item {
+  background-color: #dddddd;
+  padding: 7px;
+  margin: $m 0;
+  font-size: $f;
+  border-radius: 5px;
+  border: 1px solid #999999;
+
+
+  &:active, &:hover {
+    background-color: #999999;
+    color: white;
+  }
+
+  &:first-of-type {
+    margin-top: $m*2;
+  }
+
+  &:last-of-type {
+    margin-bottom: $m*2;
+  }
+}
+
+@mixin flex($dir: column) {
+  display: flex;
+  flex-direction: $dir;
+}
+
+.menu {
+    background-color: #dddddd;
+    color: #324476;
+    width: $w;
+    @include flex();
+    border-radius: 5px;
+    padding: 5px;
+    overflow-y: scroll;
+  
+  
+    h1 {
+      font-size: $f*1.3;
+      padding-left: 5px;
+    }
+  
+    & > img {
+      width: 100%;
+    }
+  
+    .dropmenu{
+      transition: max-height 0.3s;
+      max-height: 0;
+      overflow: hidden;
+    }
+  
+    .dropmenu_active{
+      max-height: 100vh;
+      
+    }
+  }
+
+  .menu_items_active{
+    background-color: #666;
+    color: #FEF;
+  }
+

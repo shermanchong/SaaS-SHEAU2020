@@ -1,12 +1,21 @@
 import React from 'react'
 import But from '../../But/index'
 
-function Message({ buttons, name, time, reply, threads }) {
+function Message({ buttons, name, time, reply, right }) {
+
+    var r = "threadCont";
+    var re = 'thread'
+
+    if(right){
+        r = "threadReply";
+        re = 'thread reply';
+    }
+
     return (
-        <div class="threadCont">
-            <div class="thread">
+        <div class={r}>
+            <div class={re}>
                 <div class="cardLeft">
-                    <img src="sheau2020\src\images\message.jpg" />
+                    <img src={require('../../../images/message.jpg')} alt="icon" class="images"/>
                 </div>
                 <div class="cardRight">
                     <div class="details">

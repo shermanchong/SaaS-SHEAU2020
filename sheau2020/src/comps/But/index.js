@@ -1,6 +1,6 @@
 import React from 'react'
 
-function But({buttonText, active,display}){
+function But({buttonText, active,display, OnClick}){
 var cn = "normBut"
 
     if(active){
@@ -11,7 +11,7 @@ var cn = "normBut"
     }
 
     return(
-        <button class={cn}>{buttonText}</button>
+        <button class={cn} onClick={OnClick}>{buttonText}</button>
     )
 }
 
