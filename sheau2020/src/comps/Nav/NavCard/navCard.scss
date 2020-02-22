@@ -1,0 +1,30 @@
+.cardCont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    color: gray;
+    border-bottom: 1px solid #324476;
+}
+
+.cardCont:hover{
+    background-color: #FBFAFA;
+}
+
+.cardContActive{
+    background-color: #FBFAFA;
+    border-left: solid 5px #324476;
+}
+
+.add{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    color: gray;
+    
+}

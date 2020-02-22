@@ -1,0 +1,14 @@
+.dp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 50px;
+}
+
+.dpName{
+    font-size: 15px;
+    color: gray;
+}
