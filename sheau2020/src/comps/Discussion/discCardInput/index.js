@@ -2,59 +2,9 @@ import React from 'react'
 import But from '../../But'
 import Dropdown from '../../Dropdown'
 
-function DiscCardInput({ buttons, di, OnClick, }) {
+function DiscCardInput({ buttons, di, OnClick, drop }) {
 
-    var names = [
-        {
-            itemTitle: "Everyone"
-        },
-        {
-            itemTitle: "Jessie"
-        },
-        {
-            itemTitle: "Liz"
-        },
-        {
-            itemTitle: "Jeff"
-        },
-        {
-            itemTitle: "Tom"
-        },
-        {
-            itemTitle: "Sally"
-        },
-    ];
-
-    var comments = [
-        {
-            itemTitle: "Follows directions",
-            OnClick: () => { alert('follows directions') },
-            active: false
-        },
-        {
-            itemTitle: "Works diligently",
-            OnClick: () => { alert('follows directions') },
-            active: false
-        },
-        {
-            itemTitle: "Respectful to his peers",
-            OnClick: () => { alert('follows directions') },
-            active: false
-        },
-        {
-            itemTitle: "Great Listener",
-            OnClick: () => { alert('follows directions') },
-            active: false
-        },
-        {
-            itemTitle: "Plays well with others",
-            OnClick: () => { alert('follows directions') },
-            active: false
-        },
-    ];
-
-    if (buttons) {
-
+    if (drop) {
         return (
             <div class="discCard">
                 <div class="cardLeft">
@@ -71,7 +21,7 @@ function DiscCardInput({ buttons, di, OnClick, }) {
                             <option>Tom</option>
                             <option>Sally</option>
                         </select>
-                        
+
                         <select>
                             <option>Follows directions</option>
                             <option>Works diligently</option>
@@ -79,37 +29,22 @@ function DiscCardInput({ buttons, di, OnClick, }) {
                             <option>Great Listener</option>
                             <option>Plays well with others</option>
                         </select>
-                    </div>
-                    <input class="question" placeholder="Got a Question?"></input>
-
-                    <div className="buttons">
-                        {buttons.map((o, i) => {
-                            return <But {...o}
-                            />
-                        })}
+                        
                     </div>
 
-                </div>
-            </div>
 
-        )
-    }
-    else if (names) {
-        return (
-            <div class="discCard">
-                <div class="cardLeft">
-                    <img src={require('../../../images/message.jpg')} alt="icon" class="images" />
-                </div>
-                <div class="cardRight">
-
-
-                    <input class="question" placeholder="Got a Question?"></input>
+                    <input class="question" placeholder="Leave a Comment"></input>
 
                     <div className="buttons">
-                        {buttons.map((o, i) => {
-                            return <But {...o}
-                            />
-                        })}
+                       
+                       <But
+                        buttonText={'Reply'}
+                        active = {true}
+                       />
+                       <But
+                        buttonText={'Cancel'}
+                        active = {false}
+                       />
                     </div>
 
                 </div>
@@ -117,7 +52,35 @@ function DiscCardInput({ buttons, di, OnClick, }) {
 
         )
 
-    }
+    } 
+
+   else  if (buttons) {
+
+      
+            return (
+                <div class="discCard">
+                    <div class="cardLeft">
+                        <img src={require('../../../images/message.jpg')} alt="icon" class="images" />
+                    </div>
+                    <div class="cardRight">
+
+                        <input class="question" placeholder="Leave a Question"></input>
+
+                        <div className="buttons">
+                            {buttons.map((o, i) => {
+                                return <But {...o}
+                                />
+                            })}
+                        </div>
+
+                    </div>
+                </div>
+
+            )
+        }
+
+
+    
 
 
     else {
@@ -127,7 +90,7 @@ function DiscCardInput({ buttons, di, OnClick, }) {
                     <img src={require('../../../images/message.jpg')} alt="icon" class="images" />
                 </div>
                 <div class="cardRight">
-                    <input class="question" placeholder="Got a Question?"></input>
+                    <input class="question" placeholder="Leave a Question"></input>
 
                 </div>
             </div>
@@ -139,5 +102,7 @@ function DiscCardInput({ buttons, di, OnClick, }) {
 
 
 }
+
+
 
 export default DiscCardInput;

@@ -1,6 +1,8 @@
 import React from 'react';
 import DiscCardInput from '../comps/Discussion/discCardInput';
 import DiscCard from '../comps/Discussion/discCard';
+import FileDrop from '../comps/FileDrop';
+import ImgCarousel from '../comps/Carousel'
 
 export default {
     title: "DiscCard",
@@ -20,9 +22,8 @@ export const DiscCompInputWithButtons = () => {
 
 export const CommentInputWithDropdown = () => {
      return <DiscCardInput
-          names = {names}
-          comments = {comments}
-          buttons = {buttons}
+          drop = {drop}
+   
           />
 }
 
@@ -30,6 +31,16 @@ export const DefaultDiscComp = () => {
      return <DiscCard
           threads={threads}
      />
+}
+
+export const DefaultFileDrop = () => {
+     return <FileDrop
+     
+     />
+}
+
+export const DefaultCarousel = () =>{
+     return <ImgCarousel/>
 }
 
 
@@ -65,26 +76,9 @@ var threads = [
 
 ]
 
-var names = [
-     {
-          name: "Andy"
-     },
-     {
-          name: "Jessie"
-     },
-     {
-          name: "Liz"
-     },
-     {
-          name: "Jeff"
-     },
-     {
-          name: "Tom"
-     },
-     {
-          name: "Sally"
-     },
-]
+var drop = {
+     drop: true
+}
 
 var comments = [
      {
