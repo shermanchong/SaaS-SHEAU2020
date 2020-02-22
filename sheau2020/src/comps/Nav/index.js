@@ -10,7 +10,7 @@ function Nav() {
 
     return (
 
-        <div>
+        <div class="nav">
             <div class="dp">
                 <img src={require('../../images/dp.jpg')} />
                 <h3 class="dpName">Ms. Stephanie</h3>

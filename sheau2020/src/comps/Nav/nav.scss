@@ -1,3 +1,7 @@
+.nav{
+    background-color: white;
+}
+
 .dp{
     display: flex;
     flex-direction: column;
@@ -6,6 +10,8 @@
     width: 150px;
     height: 150px;
     margin-bottom: 50px;
+    background-color: white;
+    padding: 5px;
 }
 
 .dpName{
