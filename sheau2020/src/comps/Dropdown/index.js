@@ -51,9 +51,13 @@ function Dropdown({ items, menuTitle, children, dropdown, caption, add }) {
       <div className='menu' onClick={() => {
         setDrop(!drop)
       }}>
-        <h1>{title}</h1>
+        <div class="menuTitle">
+        <h1 class="title">{title}</h1>
         {children}
-
+        <h3 class="icon">+</h3>
+        </div>
+        
+        
         <div id='item_cont' className={cn}>
           {items.map((o, i) => {
             return <DropItem {...o}

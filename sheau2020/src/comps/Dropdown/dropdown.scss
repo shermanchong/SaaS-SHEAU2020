@@ -82,3 +82,16 @@ $m: 2px;
 .menuBut{
   margin-left: 100px;
 }
+
+.menuTitle{
+  display: flex;
+  flex-direction: row;
+}
+
+.title{
+  flex: 15;
+}
+
+.icon{
+  flex:1;
+}
