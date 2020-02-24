@@ -1,3 +1,6 @@
+$hd: 12px;
+$bd: 15px;
+
 .discComp{
     display: flex;
     flex-direction: column;
@@ -5,7 +8,18 @@
     width: 650px;
     border-radius: 15px;
     padding: 50px;
-    height: 500px;
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+.comComp{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    width: 750px;
+    border-radius: 15px;
+    padding: 50px;
+    max-height: 500px;
     overflow-y: scroll;
 }
 
@@ -13,12 +27,19 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 650px;
-    height: 120px;
-    padding: 15px;
+    width: 740px;
+    height: 150px;
+    padding: 5px;
     border-radius: 15px;
-    box-shadow: grey 0px -1px 10px;
+    box-shadow: lightgrey 0px -5px 5px;
 }
+
+.cardLeft{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
 
 .details{
     display: flex;
@@ -27,36 +48,48 @@
 
 .user{ 
     padding-right: 10px;
+    font-size: $hd;
 }
 
 .time{
     color: grey;
+    font-size: $hd;
 }
 
 .messages{
     background-color: white;
-    min-height: 50px;
+    min-height: 25px;
     padding: 15px;
 }
 
 .question{
     background-color: #FBFAFA;
     padding: 5px;
-    margin: 10px;
+    margin: 15px;
     border-radius: 5px;
-    min-height: 25px;
+    height: 30px;
 
 }
 .threadCont{
     width: 650px;
     display: flex;
     flex-direction: row;
+    font-size: $bd;
+    
+}
+.comCont{
+    width: 850px;
+    display: flex;
+    flex-direction: row;
+    font-size: $bd;
+    
 }
 
 .threadReply{
     width: 650px;
     display: flex;
     flex-direction: row-reverse;
+    font-size: $bd;
 
 }
 
@@ -65,7 +98,7 @@
     width: 450px;
     padding: 0px;
     border-radius: 5px;
-    min-height: 20px;
+    min-height: 125px;
     border: 1px solid lightgrey;
     margin: 5px;
 }
@@ -79,9 +112,9 @@
 }
 
 .images{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    border-radius: 5px;
 
 }
 

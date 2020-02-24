@@ -1,21 +1,26 @@
 import React from 'react'
 import But from '../../But/index'
 
-function Message({ buttons, name, time, reply, right }) {
+function Message({ buttons, name, time, reply, right, first, comment }) {
 
     var r = "threadCont";
     var re = 'thread'
 
-    if(right){
+    if (right) {
         r = "threadReply";
         re = 'thread reply';
+
+    }
+
+    if(comment){
+        re = "comCont"
     }
 
     return (
         <div class={r}>
             <div class={re}>
                 <div class="cardLeft">
-                    <img src={require('../../../images/message.jpg')} alt="icon" class="images"/>
+                    <img src={require('../../../images/message.jpg')} alt="icon" class="images" />
                 </div>
                 <div class="cardRight">
                     <div class="details">
@@ -24,11 +29,12 @@ function Message({ buttons, name, time, reply, right }) {
                     </div>
                     <div class="messages">
                         {reply}
-                </div>
+                    </div>
 
                     <div className="buttons">
                         {buttons.map((o, i) => {
-                            return <But {...o} />
+                            return <But {...o}
+                                first={first} />
                         })}
                     </div>
 
@@ -43,19 +49,21 @@ Message.defaultProps = {
     buttons: [
 
         {
+            buttonText: 'Reply',
+            OnClick: () => { alert('replies') },
+            active: true
+        },
+        {
 
             buttonText: "Like",
             OnClick: () => { alert('Like') },
-        }, {
-            buttonText: 'Reply',
-            OnClick: () => { alert('replies') },
         },
 
     ],
 
     threads: [
         {
-           
+
         }
     ]
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import But from '../../But'
 import Dropdown from '../../Dropdown'
 
-function DiscCardInput({ buttons, di, OnClick, drop }) {
+function DiscCardInput({ buttons, di, OnClick, drop, SetCom, Com,  }) {
 
     if (drop) {
         return (
@@ -38,12 +38,19 @@ function DiscCardInput({ buttons, di, OnClick, drop }) {
                     <div className="buttons">
                        
                        <But
-                        buttonText={'Reply'}
+                        buttonText={'Update'}
                         active = {true}
+                        first ={true}
+                        OnClick ={ () =>{
+                            SetCom(!Com);
+                        }}
                        />
                        <But
                         buttonText={'Cancel'}
                         active = {false}
+                        OnClick ={ () =>{
+                            SetCom(!Com);
+                        }}
                        />
                     </div>
 

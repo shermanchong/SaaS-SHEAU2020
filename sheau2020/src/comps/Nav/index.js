@@ -31,7 +31,7 @@ function Nav() {
                 <h3 class="caption">Add Class</h3>
             </div>
 
-            <div class="dp">
+            <div class="dp logout">
                 <h3 class="dpName">Logout</h3>
             </div>
 

@@ -3,7 +3,7 @@ import But from '../../But'
 import DatePicker from 'react-date-picker'
 import Content from '../CardComp/Content'
 
-function CardCompInput({ buttons, di }) {
+function CardCompInput({ buttons, di, }) {
 
    
 
