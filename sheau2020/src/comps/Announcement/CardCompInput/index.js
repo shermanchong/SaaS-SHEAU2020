@@ -3,7 +3,7 @@ import But from '../../But'
 import DatePicker from 'react-date-picker'
 import Content from '../CardComp/Content'
 
-function CardCompInput({ buttons, di, }) {
+function CardCompInput({ buttons, di,SetAnD }) {
 
    
 
@@ -16,7 +16,9 @@ function CardCompInput({ buttons, di, }) {
                
                 <div className="buttons">
                     {buttons.map((o, i) => {
-                        return <But {...o} />
+                        return <But {...o} OnClick={()=>{
+                            SetAnD(true);
+                          }} />
                     })}
                 </div>
 

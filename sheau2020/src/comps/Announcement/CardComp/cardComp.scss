@@ -7,6 +7,7 @@
     border-radius: 15px;
     padding: 50px;
     height: 150px;
+    font-family: 'Barlow';
 }
 
 .cardLeft{
@@ -34,11 +35,13 @@
     color: #324476;
     border-radius: 10px;
     margin: 15px;
+    height: 150px;
 }
 .cardRightD{
     text-align: center;
     justify-content: center;
     align-items: center;
+    
 }
 
 #calendar{
@@ -54,7 +57,7 @@
 .header{
     background-color: #F4DD8F;
     color: #324476;
-    margin: 5px;
+    margin: 1px;
     border-radius: 5px;
     height: 25px;
     padding: 5px;
@@ -65,7 +68,7 @@
     margin: 5px;
     min-height: 50px;
     border-radius: 5px;
-    padding: 10px;
+    padding: 5px;
 
 }
 

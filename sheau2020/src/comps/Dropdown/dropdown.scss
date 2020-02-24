@@ -1,19 +1,18 @@
-$w: 150px;
+$w: 600px;
 
 $f: 12px;
 $m: 2px;
 
-#item_cont{
-    overflow-y: scroll;
-}
 
 .menu_item {
-  background-color: #dddddd;
+  background-color: white;
   padding: 7px;
   margin: $m 0;
   font-size: $f;
-  border-radius: 5px;
-  border: 1px solid #999999;
+  display: flex;
+  flex-direction: row;
+  font-family: 'Barlow';
+
 
 
   &:active, &:hover {
@@ -36,13 +35,16 @@ $m: 2px;
 }
 
 .menu {
-    background-color: #dddddd;
+    background-color: white;
     color: #324476;
     width: $w;
     @include flex();
-    border-radius: 5px;
+    border-bottom:  solid 2px grey;
+    
     padding: 5px;
-    overflow-y: scroll;
+    display: flex;
+    
+   
   
   
     h1 {
@@ -69,5 +71,14 @@ $m: 2px;
   .menu_items_active{
     background-color: #666;
     color: #FEF;
+
   }
 
+.menuAdd{
+  flex:3;
+}
+
+
+.menuBut{
+  margin-left: 100px;
+}

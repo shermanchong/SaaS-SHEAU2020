@@ -1,29 +1,30 @@
 import React, { useState } from 'react';
 import NavCard from '../Nav/NavCard';
 
-function Nav() {
+function Nav({SetHome,SetDocs,SetUp}) {
 
-    const [home, setHome] = useState(true);
-    const [docs, setDocs] = useState(true);
-    const [up, setUp] = useState(true);
+    
 
 
     return (
 
         <div class="nav">
             <div class="dp">
-                <img src={require('../../images/dp.jpg')} />
+                <img src={require('../../images/dp.png')} />
                 <h3 class="dpName">Ms. Stephanie</h3>
             </div>
 
             <NavCard
                 caption={'Home'}
+                SetHome = {SetHome}
             />
             <NavCard
                 caption={'Documents'}
+                SetDocs = {SetDocs}
             />
             <NavCard
                 caption={'Upgrade'}
+                SetUp = {SetDocs}
             />
             <div class='add' onClick={() => {
             }}>
@@ -32,7 +33,7 @@ function Nav() {
             </div>
 
             <div class="dp logout">
-                <h3 class="dpName">Logout</h3>
+                <h3>Logout</h3>
             </div>
 
         </div>

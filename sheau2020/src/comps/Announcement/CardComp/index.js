@@ -5,7 +5,7 @@ import Content from '../CardComp/Content'
 
 
 
-function CardComp({ buttons, di, input, SetAn }) {
+function CardComp({ buttons, di, input, SetAn, SetAnD }) {
 
     if (di) {
 
@@ -26,7 +26,9 @@ function CardComp({ buttons, di, input, SetAn }) {
 
                     <div className="buttons">
                         {buttons.map((o, i) => {
-                            return <But {...o} />
+                            return <But {...o} OnClick={()=>{
+                                SetAnD(!true);
+                              }} />
                         })}
                     </div>
 
