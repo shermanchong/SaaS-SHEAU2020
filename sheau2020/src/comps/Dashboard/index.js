@@ -9,7 +9,7 @@ import FileDrop from '../FileDrop';
 function Dashboard() {
 
     const [home, setHome] = useState(true);
-    const [docs, setDocs] = useState(true);
+    const [docs, setDocs] = useState(false);
     const [up, setUp] = useState(false);
 
     if (docs == true) {

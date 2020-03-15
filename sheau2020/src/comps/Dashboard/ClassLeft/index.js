@@ -94,7 +94,9 @@ function ClassLeft() {
                         />
                     </div>
                     <div >
-                        <DiscCardInput />
+                        <DiscCardInput
+                        buttons={buttons}
+                         />
                     </div>
 
 
@@ -120,7 +122,9 @@ function ClassLeft() {
                     <div onClick={() => {
                         setAn(false);
                     }}>
-                        <DiscCardInput />
+                        <DiscCardInput
+                            buttons={buttons}
+                        />
                     </div>
 
 
@@ -141,7 +145,8 @@ function ClassLeft() {
                     threads={threads}
                 />
 
-                <DiscCardInput />
+                <DiscCardInput
+                buttons={buttons} />
             </div>
         )
     }
