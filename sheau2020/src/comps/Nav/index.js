@@ -18,19 +18,22 @@ function Nav({SetHome,SetDocs,SetUp}) {
                 caption={'Home'}
                 SetHome = {SetHome}
             />
+             <div class='addClass' >
+                 <div class="class">
+                     Class A
+                 </div>
+                <h3 class="caption" onClick={() => {
+            }}>Add Class +</h3>
+            </div>
             <NavCard
                 caption={'Documents'}
                 SetDocs = {SetDocs}
             />
             <NavCard
                 caption={'Upgrade'}
-                SetUp = {SetDocs}
+                SetUp = {SetUp}
             />
-            <div class='add' onClick={() => {
-            }}>
-                <img src={require('../../images/message.jpg')} width="50px"></img>
-                <h3 class="caption">Add Class</h3>
-            </div>
+           
 
             <div class="dp logout">
                 <h3>Logout</h3>

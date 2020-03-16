@@ -16,7 +16,7 @@ function CardComp({ buttons, di, input, SetAn, SetAnD }) {
                     <div class="day">27</div>
                     
                 </div>
-                <div class="cardRight">
+                <div class="cardCRight">
 
                     <div class="displayCont">
                         {di.map((o, i) => {
@@ -48,7 +48,8 @@ function CardComp({ buttons, di, input, SetAn, SetAnD }) {
                     <div class="day">27</div>
                     
                 </div>
-                <div class="cardRight">
+                <div class="cardCRight">
+                    
                     <input class="header" placeholder="Title"></input>
                     <textarea class="contents" placeholder="Message"></textarea>
 
@@ -71,7 +72,7 @@ function CardComp({ buttons, di, input, SetAn, SetAnD }) {
                     <div class="day">27</div>
                     
                 </div>
-                <div class="cardRight cardRightD">
+                <div class="cardCRight cardRightD">
 
                     <div class="title">Make an Announcement</div>
                     <div className="buttons">

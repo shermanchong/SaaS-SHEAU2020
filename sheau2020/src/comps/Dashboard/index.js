@@ -3,14 +3,23 @@ import Nav from '../Nav/index';
 import ClassLeft from '../Dashboard/ClassLeft';
 import ClassRight from '../Dashboard/ClassRight';
 import Dropdown from '../Dropdown';
-import FileDrop from '../FileDrop';
+
 
 
 function Dashboard() {
 
-    const [home, setHome] = useState(true);
-    const [docs, setDocs] = useState(false);
+    const [home, setHome] = useState(false);
+    const [docs, setDocs] = useState(true);
     const [up, setUp] = useState(false);
+    const [ima, setIma] = useState(false);
+
+    var im = 'hide';
+    var txt = 'preTxt';
+
+    if(ima){
+        im =  'imgPre';
+    }
+
 
     if (docs == true) {
         return (
@@ -27,21 +36,27 @@ function Dashboard() {
                     </div>
                     <div class="dashBot">
                         <div class="docLeft">
-                            <Dropdown 
+                            <Dropdown
                                 caption={'Zoo Field Trip Form'}
                             />
-                            <Dropdown 
+                            <Dropdown
                                 caption={'Hot Lunch Orders'}
                             />
-                            <Dropdown 
+                            <Dropdown
                                 caption={'Photo Waiver'}
                             />
                             <Dropdown
-                                add ={true}
+                                add={true}
+                                setIma={setIma}
                             />
                         </div>
                         <div class="docRight">
-                            <FileDrop/>
+                            <div class="preview">Preview of Document</div>
+                            <div class="preCont">
+                                <div class={txt}>You can preview your document once a file is uploaded.</div>
+                                <img class={im} src={require('../../images/file.png')} />
+                            </div>
+
                         </div>
 
                     </div>

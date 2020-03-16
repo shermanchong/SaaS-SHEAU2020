@@ -1,15 +1,20 @@
 import React from 'react'
 import But from '../../But/index'
 
-function Message({ buttons, name, time, reply, right, first, comment }) {
+function Message({ buttons, name, time, reply, right, first, comment,setReply }) {
 
     var r = "threadCont";
-    var re = 'thread'
+    var re = 'thread';
+    var left = 'cardLeft';
+    var circ = 'circle';
+    var d = 'drop';
 
     if (right) {
         r = "threadReply";
         re = 'thread reply';
-
+        left = '';
+        circ = '';
+        d = 'drop_off';
     }
 
     if(comment){
@@ -19,26 +24,27 @@ function Message({ buttons, name, time, reply, right, first, comment }) {
     return (
         <div class={r}>
             <div class={re}>
-                <div class="cardLeft">
-                    <img src={require('../../../images/message.jpg')} alt="icon" class="images" />
+                <div class={left}>
+                   <div class={circ}></div>
                 </div>
                 <div class="cardRight">
-                    <div class="details">
-                        <div class="user">{name}</div>
-                        <div class="time">{time}</div>
-                    </div>
+                   
                     <div class="messages">
                         {reply}
                     </div>
 
                     <div className="buttons">
+                        
                         {buttons.map((o, i) => {
                             return <But {...o}
-                                first={first} />
+                                first={first}
+                                 />
                         })}
+                        <div class="time">{time}</div>
                     </div>
 
                 </div>
+                <div class={d}><img src={require("../../../images/drop.png")}/></div>
             </div>
         </div>
 

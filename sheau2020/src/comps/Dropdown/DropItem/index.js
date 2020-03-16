@@ -1,7 +1,7 @@
 import React from 'react';
 import But from '../../But/index';
 
-function DropItem({ itemTitle, OnClick, active, set, caption, button }) {
+function DropItem({ itemTitle, OnClick, active, set, caption, button, setIma, ima }) {
 
   var cn = 'menu_item';
 
@@ -21,6 +21,9 @@ function DropItem({ itemTitle, OnClick, active, set, caption, button }) {
           <But
             buttonText={'Add'}
             active={false}
+            OnClick={()=>{
+              setIma(!false);
+            }}
 
           />
         </div>
@@ -32,7 +35,9 @@ function DropItem({ itemTitle, OnClick, active, set, caption, button }) {
       <div className={cn} onClick={() => {
 
       }}>
-        <a href={require('../../../images/1.jpg')}>{caption}</a>
+        <a href={require('../../../images/1.jpg')}>{caption} </a>
+        <But
+          buttonText={'X'} />
       </div>
     )
   }

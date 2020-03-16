@@ -32,7 +32,7 @@
     align-items: center;
     height: 150px;
     border-radius: 25px 25px 0px 0px;
-    background-color: #586BA5;
+    background-color: #79A6C9;
     color: white;
     font-size: 30px;
 }
@@ -46,11 +46,43 @@
 
 .docLeft{
     margin: 15px;
+    margin-right: 0px;
     padding: 5px;
     border-right:  solid 1px grey;
 }
 .docRight{
-    padding: 220px;
-  
+  width: 550px;
 }
 
+.preview{
+    text-align: center;
+    background-color: #EC6B47;
+    color: white;
+    height: 50px;
+    padding: 15px;
+    font-size: 150%;
+}
+
+.preCont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 700px;
+    background-color: #DEDAD9;
+}
+
+.imgPre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+}
+
+.preTxt{
+    font-size: 130%;
+
+}
+
+.hide{
+    display: none;
+}

@@ -1,11 +1,11 @@
 .dropdown{
     transition: max-height 0.3s;
-    max-height: 40px;
+    max-height: 130px;
     overflow: hidden;
 }
 
 .dropdown_active{
-    min-height: 150px;
+    min-height: 80vh;
 }
 
 .icon{

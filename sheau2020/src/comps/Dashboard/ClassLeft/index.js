@@ -11,7 +11,8 @@ function ClassLeft() {
     const [anD, setAnD] = useState(false);
 
     var buttons = [
-        {   color:'#EC6B47',
+        {
+            color: '#EC6B47',
             buttonText: "Post",
             active: false
         }
@@ -23,13 +24,13 @@ function ClassLeft() {
             display: false,
             dispText: "Field trip Details!",
             dispContent: "Please remember to arrive at school before 9:00am, bus will leave at 9:30am",
-            color: '#F3BBA8'
+            
         },
         {
             display: false,
             dispText: "Field Trip Schedule",
             dispContent: "Field trip schedule posted down below: 9:30 - 10:00 Arrive at destination 10:15 - 12:00 Crafts down at the beach 12:00 - 12:45 Lunch picnic 1:00 - 2:00 Story time 2:15 - 3:45 Heading back to school ",
-            color: '#C9E0E4'
+            
         }
     ]
     var threads = [
@@ -39,6 +40,7 @@ function ClassLeft() {
             reply: "How long would the kids be outdoors for? Would they need to pack sunscreen?",
             right: false,
             first: true,
+            color: '#F3BBA8'
 
         },
         {
@@ -46,38 +48,26 @@ function ClassLeft() {
             time: "5 hours ago",
             reply: "Yes please bring sunscreen!",
             right: true,
-            first: false,
-            
+            first: true,
+            color: '#F3BBA8'
         },
         {
             name: "Anna",
             time: "20 hours ago",
             reply: "How long would the kids be outdoors for? Would they need to pack sunscreen?",
             right: true,
-            first: false
+            first: true,
+            color: '#F3BBA8'
         },
         {
             name: "Steve",
             time: "5 hours ago",
             reply: "Yes please bring sunscreen!",
             right: true,
-            first: false
+            first: true,
+            color: '#F3BBA8'
         },
-        {
-            name: "Anna",
-            time: "20 hours ago",
-            reply: "How long would the kids be outdoors for? Would they need to pack sunscreen?",
-            right: true,
-            first: false
-        },
-        {
-            name: "Steve",
-            time: "5 hours ago",
-            reply: "Yes please bring sunscreen!",
-            right: true,
-            first: false
-        },
-
+       
     ]
 
     if (an == true) {
@@ -93,14 +83,19 @@ function ClassLeft() {
                     </div>
 
                     <div >
-                    <DiscCardInput
-                            buttons={buttons}
-                        />
-                        <DiscCard
-                            threads={threads}
-                        />
+
+                        <div class="dCont">
+                            {threads.map((o, i) => {
+                                return <DiscCard {...o}
+                                    threads={threads} />
+                            })}
+                        </div>
+
+                        <DiscCardInput
+                            buttons={buttons} />
+
                     </div>
-                   
+
 
 
                 </div>
@@ -114,18 +109,23 @@ function ClassLeft() {
                             SetAnD={setAnD}
                         />
                     </div>
-                    
+
                     <div onClick={() => {
                         setAn(false);
                     }}>
-                          <DiscCardInput
-                            buttons={buttons}
-                        />
-                        <DiscCard
-                            threads={threads}
-                        />
+
+                        <div class="dCont">
+                            {threads.map((o, i) => {
+                                return <DiscCard {...o}
+                                    threads={threads} />
+                            })}
+                        </div>
+
+                        <DiscCardInput
+                            buttons={buttons} />
+
                     </div>
-                    
+
 
 
                 </div>
@@ -141,13 +141,16 @@ function ClassLeft() {
 
 
                 />
+                <div class="dCont">
+                    {threads.map((o, i) => {
+                        return <DiscCard {...o}
+                            threads={threads} />
+                    })}
+                </div>
+
                 <DiscCardInput
                     buttons={buttons} />
-                <DiscCard
-                    threads={threads}
-                />
 
-                
             </div>
         )
     }

@@ -11,9 +11,9 @@ function Content({ di, dispText, dispContent, color }) {
     return (
         <div onClick={() => {
             setDrop(!drop)
-        }} class={cn} style={{ backgroundColor: color }}>
+        }} class='cardCRight' style={{ backgroundColor: 'white' }}>
             <div class="headerCont">
-                <div class="header">{dispText}<img class="icon" src={require("../../../../images/drop.png")} /></div>
+                <div class="header">{dispText}</div>
             </div>
 
             <div class="contents">{dispContent}</div>

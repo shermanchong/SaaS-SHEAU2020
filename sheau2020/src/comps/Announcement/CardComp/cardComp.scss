@@ -3,11 +3,12 @@
     flex-direction: row;
     padding: 30px;
     width: 650px;
-    box-shadow: lightgrey 5px 0px 15px;
+    box-shadow: rgb(54, 117, 165) 0px 5px 5px;
     border-radius: 15px;
     padding: 50px;
     height: 200px;
     font-family: 'Barlow';
+    background-color: #C9E0E4;
 }
 
 .cardLeft{
@@ -27,11 +28,11 @@
     font-size: 75px;
 }
 
-.cardRight{
+.cardCRight{
     display: flex;
     flex:4;
     flex-direction: column;
-    background-color: white;
+    background-color: #C9E0E4;
     color: #324476;
     border-radius: 10px;
     margin: 15px;
@@ -86,5 +87,16 @@
     overflow-y: scroll;
     flex-direction: column;
     height: 250px;
-    
+}
+
+.schCont{
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+}
+
+.schedule{
+    min-width: 100px;
+    display: flex;
+    flex-direction: row;
 }

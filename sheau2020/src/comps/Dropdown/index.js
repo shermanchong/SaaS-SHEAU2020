@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import DropItem from './DropItem'
+import FileDrop from '../FileDrop';
 
-
-function Dropdown({ items, menuTitle, children, dropdown, caption, add }) {
+function Dropdown({ items, menuTitle, children, dropdown, caption, add, setIma,ima }) {
 
   const [drop, setDrop] = useState(false);
   const [title, setTitle] = useState(caption);
@@ -15,9 +15,11 @@ function Dropdown({ items, menuTitle, children, dropdown, caption, add }) {
       <div className='menu' onClick={() => {
         setDrop(!drop)
       }}>
+        
         <h1>{title}</h1>
+        <FileDrop/>
         {children}
-
+       
         <div id='item_cont' className={cn}>
           {items.map((o, i) => {
             return <DropItem {...o}
@@ -41,6 +43,8 @@ function Dropdown({ items, menuTitle, children, dropdown, caption, add }) {
             return <DropItem {...o}
               set={setTitle}
               button={true}
+              setIma={setIma}
+              ima = {ima}
             />
           })}
         </div>

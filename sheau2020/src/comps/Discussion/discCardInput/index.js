@@ -8,7 +8,7 @@ function DiscCardInput({ buttons, di, OnClick, drop, SetCom, Com,  }) {
         return (
             <div class="discCard">
                 <div class="cardLeft">
-                    <img src={require('../../../images/message.jpg')} alt="icon" class="images" />
+                   <div class="circle"></div>
                 </div>
                 <div class="cardRight">
                     <div class="drops">
@@ -67,7 +67,7 @@ function DiscCardInput({ buttons, di, OnClick, drop, SetCom, Com,  }) {
             return (
                 <div class="discCard">
                     <div class="cardLeft">
-                        <img src={require('../../../images/message.jpg')} alt="icon" class="images" />
+                      <div class="circle"></div>
                     </div>
                     <div class="cardRight">
 
@@ -94,9 +94,9 @@ function DiscCardInput({ buttons, di, OnClick, drop, SetCom, Com,  }) {
         return (
             <div class="replyInput " >
                 <div class="cardLeft">
-                    <img src={require('../../../images/message.jpg')} alt="icon" class="images" />
+                   <div class="circle"></div>
                 </div>
-                <div class="cardRight">
+                <div style={{width:'500px'}}>
                     <input class="question" placeholder="Leave a reply"></input>
 
                 </div>

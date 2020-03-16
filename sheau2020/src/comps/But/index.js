@@ -1,6 +1,6 @@
 import React from 'react'
 
-function But({buttonText, active,display, OnClick, first,color}){
+function But({buttonText, active,display, OnClick, first,color,setReply}){
 var cn = "normBut"
 
     if(active){
