@@ -5,9 +5,9 @@ import DiscCardInput from '../../Discussion/discCardInput';
 import But from '../../But';
 import FileDrop from '../../FileDrop';
 
-function ClassRight() {
+function ClassRight({unlock, setPromo}) {
 
-    const [com, setCom] = useState(true);
+    const [com, setCom] = useState(false);
 
     var drop = {
         drop: true
@@ -43,7 +43,10 @@ function ClassRight() {
                   
                         <img src={require('../../../images/3.jpg')}></img>
                     </div>
-                    <FileDrop/>
+                    <FileDrop
+                    unlock={unlock}
+                    setPromo={setPromo}
+                        />
                 </div>
 
                 <div class="bottom">

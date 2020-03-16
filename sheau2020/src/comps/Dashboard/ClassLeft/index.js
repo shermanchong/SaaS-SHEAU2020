@@ -5,7 +5,7 @@ import CardCompInput from '../../Announcement/CardCompInput/index';
 import DiscCard from '../../Discussion/discCard';
 import DiscCardInput from '../../Discussion/discCardInput'
 
-function ClassLeft() {
+function ClassLeft({setPromo,unlock}) {
 
     const [an, setAn] = useState(false);
     const [anD, setAnD] = useState(false);
@@ -107,6 +107,8 @@ function ClassLeft() {
                         <CardCompInput
                             buttons={buttons}
                             SetAnD={setAnD}
+                            setPromo={setPromo}
+                            unlock={unlock}
                         />
                     </div>
 

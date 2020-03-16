@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function NavCard({ caption, SetHome, SetDocs, SetUp }) {
+function NavCard({ caption, onClick, SetHome, SetDocs, SetUp,home, docs,up }) {
 
     const [active, setActive] = useState(false);
 
@@ -21,24 +21,23 @@ function NavCard({ caption, SetHome, SetDocs, SetUp }) {
         upgrade = '';
     }
 
-    if (SetHome) {
+    if (home==true) {
         card = "cardCont cardContActive";
 
     }
 
-    if (SetDocs) {
+    if (docs==true) {
         card = "cardCont cardContActive";
 
     }
-    if (SetUp) {
+    if (up==true) {
         card = "cardCont cardContActive";
 
     }
 
 
     return (
-        <div class={card} onClick={() => {
-        }}>
+        <div class={card} onClick={onClick}>
             <img class={home} src={require('../../../images/home.png')} width="50px" />
             <img class={docs} src={require('../../../images/docs.png')} width="50px" />
             <img class={upgrade} src={require('../../../images/upgrade.png')} width="50px" />

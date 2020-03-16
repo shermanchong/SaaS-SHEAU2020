@@ -5,7 +5,7 @@ import Content from '../CardComp/Content'
 
 
 
-function CardComp({ buttons, di, input, SetAn, SetAnD }) {
+function CardComp({ buttons, di, input, SetAn, SetAnD, }) {
 
     if (di) {
 

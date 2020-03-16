@@ -1,7 +1,11 @@
 import React from 'react'
 
-function But({buttonText, active,display, OnClick, first,color,setReply}){
+function But({buttonText, active,display, OnClick, first,color,setReply,upgrade}){
 var cn = "normBut"
+
+    if(upgrade){
+        cn = "upgradeBut"
+    }
 
     if(active){
         if(!first){

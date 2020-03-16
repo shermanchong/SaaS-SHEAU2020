@@ -91,12 +91,26 @@
 
 .schCont{
     width: 100px;
+    height: 100px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    overflow: hidden;
+    
 }
 
 .schedule{
-    min-width: 100px;
+    max-width: 50px;
     display: flex;
     flex-direction: row;
+   
+}
+
+.close{
+    max-height: 19px;
+}
+
+.schDrop{
+    width: 10px;
+    height: 10px;
+    margin: 5px;
 }

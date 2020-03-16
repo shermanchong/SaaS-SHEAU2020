@@ -1,19 +1,30 @@
-import React from 'react'
+import React,{useState} from 'react'
 import But from '../../But'
 import DatePicker from 'react-date-picker'
 import Content from '../CardComp/Content'
 
 
-function CardCompInput({ buttons, di, SetAnD }) {
+function CardCompInput({ buttons, di, SetAnD, setPromo,unlock }) {
 
 
+
+var op = 'schCont close ';
+
+if(unlock==true){
+    op='schCont';
+}
 
     return (
         <div class="cardComp">
             <DatePicker class="cardLeft" />
             <div class="cardCRight">
-                <div class="schCont">
-                    <div class="schedule">Schedule</div>
+                <div class={op} onClick={()=>{
+                    setPromo(true)
+                    
+                }}>
+                    <div class='schedule'>Schedule    
+                    <img class="schDrop" src={require('../../../images/drop.png')}/>
+                    </div>
                     <select class="lists">
                         <option>January</option>
                         <option>Ferbuary</option>
@@ -28,7 +39,6 @@ function CardCompInput({ buttons, di, SetAnD }) {
                         <option>November</option>
                         <option>December</option>
                     </select>
-
                     <select>
                         <option>1</option>
                         <option>2</option>

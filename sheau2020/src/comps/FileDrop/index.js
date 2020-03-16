@@ -1,7 +1,13 @@
-import React from 'react';
+import React,{useState} from 'react';
 
-function FileDrop(){
+function FileDrop({unlock, setPromo}){
 
+
+var fi = 'fileDrop';
+
+if (unlock==true){
+    fi = 'hide'
+}
     return(
 
         <div class="fileCont">
@@ -12,7 +18,9 @@ function FileDrop(){
             <div class="browse">Browse Files </div>
 
             </p>
-            <input type="file" class="fileDrop" ></input>
+            <input type='file' class='fileDrop' ></input>
+            <div  class={fi}  onClick={() => {
+            setPromo(true)}}></div>
         </div>
 
     )

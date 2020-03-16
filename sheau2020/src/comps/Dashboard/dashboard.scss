@@ -1,7 +1,7 @@
 .dashCont{
     display: flex; 
     flex-direction: row;
-    width: 100%;
+    min-width: 1500px;
     height: 100%;
     background-color: lightgrey;
     font-family: 'Barlow';
@@ -13,6 +13,7 @@
     align-items: center;
     justify-content: center;
     background-color: lightgrey;
+    
 
    
 }
@@ -51,7 +52,7 @@
     border-right:  solid 1px grey;
 }
 .docRight{
-  width: 550px;
+  width: 850px;
 }
 
 .preview{
@@ -85,4 +86,218 @@
 
 .hide{
     display: none;
+}
+
+
+.upgradeCont{
+    background-color: #C9E0E4;
+    width: 1500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.priceLeft{
+    background-color: white;
+    height: 600px;
+    width: 300px;
+    border-radius: 20px;
+    border-top: 35px solid #EC6B47;
+}
+
+.priceRight{
+    background-color: white;
+    height: 600px;
+    width: 300px;
+    border-radius: 20px;
+    border-top: 35px solid #79A6C9;
+    margin-left: 100px;
+}
+
+.priceTop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: lightgrey solid 2px;
+}
+
+.priceBot{
+    display: flex;
+     justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 60px;
+}
+
+.product{
+    font-size: 175%;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.price{
+    font-size: 175%;
+    margin-bottom: 10px;
+}
+
+.features{
+    margin-bottom: 25px;
+    font-size: 120%;
+    width: 200px;
+    border-bottom: lightgrey solid 2px;
+}
+
+.ad{
+    background-color:rgba($color: #000000, $alpha: 0.5);
+    min-width: 1600px;
+    min-height: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 10;
+    left: 180px;
+}
+
+.advert{
+    min-width: 450px;
+    height: 450px;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: lightgrey 5px 5px 10px;
+  
+}
+
+.adBot{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.adIcon{
+    width: 100px;
+    margin-left: 175px;
+    margin-top: 25px;
+}
+
+.adT{
+    font-weight: bold; 
+    font-size: 200%;
+    color:black;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.adTx{
+    font-size: 130%;
+    margin-bottom: 30px;
+}
+
+.paymentCont{
+    background-color: white;
+    height: 700px;
+    width: 700px;
+    border-radius: 20px;
+    border-top: 35px solid #79A6C9;
+    margin-left: 100px;
+    padding: 25px;
+    position: absolute;
+    left: 450px;
+    
+}
+
+.paymentForm{
+margin-right: 50px;
+margin-bottom: 50px;
+}
+
+.paymentTop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-bottom: lightgrey solid 2px;
+}
+.paymentBot{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+caption{
+    font-size: 80%;
+    min-width: 100px;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.input{
+    width: 250px;
+}
+
+.cardInfo{
+    display:flex;
+    flex-direction: row;
+}
+
+.cvv{
+    margin-left: 50px;
+}
+
+.botRight{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.border{
+    border: 2px solid lightgrey;
+    width: 250px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.expire{
+    margin-bottom: 50px;
+}
+
+.botBorder{
+    padding-bottom: 20px;
+    border-bottom: 2px solid lightgrey;
+}
+
+.botTitle{
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.botTxt{
+    font-size: 110%;
+    padding: 5px;
+}
+
+.botPrice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.total{
+    font-size: 110%;
+    font-weight: bold;
+}
+
+.margin{
+    margin-left: 50px;
 }
