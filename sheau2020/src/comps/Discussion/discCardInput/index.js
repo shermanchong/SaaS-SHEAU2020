@@ -71,7 +71,7 @@ function DiscCardInput({ buttons, di, OnClick, drop, SetCom, Com,  }) {
                     </div>
                     <div class="cardRight">
 
-                        <input class="question" placeholder="Leave a Question"></input>
+                        <input class="question" placeholder="Make an Announcement"></input>
 
                         <div className="buttons">
                             {buttons.map((o, i) => {
@@ -92,12 +92,12 @@ function DiscCardInput({ buttons, di, OnClick, drop, SetCom, Com,  }) {
 
     else {
         return (
-            <div class="discCard">
+            <div class="replyInput " >
                 <div class="cardLeft">
                     <img src={require('../../../images/message.jpg')} alt="icon" class="images" />
                 </div>
                 <div class="cardRight">
-                    <input class="question" placeholder="Leave a Question"></input>
+                    <input class="question" placeholder="Leave a reply"></input>
 
                 </div>
             </div>

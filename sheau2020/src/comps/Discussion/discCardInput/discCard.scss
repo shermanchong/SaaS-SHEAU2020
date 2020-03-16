@@ -4,12 +4,12 @@ $bd: 15px;
 .discComp{
     display: flex;
     flex-direction: column;
-    padding: 30px;
     width: 650px;
     border-radius: 15px;
     padding: 50px;
-    max-height: 500px;
+    max-height: 400px;
     overflow-y: scroll;
+    
 }
 
 .comComp{
@@ -31,7 +31,8 @@ $bd: 15px;
     height: 150px;
     padding: 5px;
     border-radius: 15px;
-    box-shadow: lightgrey 0px -5px 5px;
+    margin-top: 25px;
+    
 }
 
 .cardLeft{
@@ -40,6 +41,9 @@ $bd: 15px;
  align-items: center;
 }
 
+.cardRight{
+    background-color: rgba(5,5,5,0);
+}
 
 .details{
     display: flex;
@@ -57,7 +61,7 @@ $bd: 15px;
 }
 
 .messages{
-    background-color: white;
+    background-color: rgba(5,5,5,0);
     min-height: 25px;
     padding: 15px;
 }
@@ -77,6 +81,12 @@ $bd: 15px;
     font-size: $bd;
     
 }
+
+.annCont{
+    border-left: 15px #C9E0E4 solid;
+    border-radius: 25px;
+}
+
 .comCont{
     width: 850px;
     display: flex;
@@ -93,13 +103,23 @@ $bd: 15px;
 
 }
 
+.replyInput{
+    width: 650px;
+    display: flex;
+    flex-direction: row;
+    font-size: $bd;
+    background-color: lightgrey;
+    border-radius: 15px;
+    height: 150px;
+}
+
 .thread{
     display: flex;
     width: 450px;
     padding: 0px;
     border-radius: 5px;
     min-height: 125px;
-    border: 1px solid lightgrey;
+    
     margin: 5px;
 }
 

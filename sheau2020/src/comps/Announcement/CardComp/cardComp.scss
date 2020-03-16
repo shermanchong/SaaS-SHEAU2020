@@ -6,7 +6,7 @@
     box-shadow: lightgrey 5px 0px 15px;
     border-radius: 15px;
     padding: 50px;
-    height: 150px;
+    height: 200px;
     font-family: 'Barlow';
 }
 
@@ -35,7 +35,7 @@
     color: #324476;
     border-radius: 10px;
     margin: 15px;
-    height: 150px;
+    height: 200px;
 }
 .cardRightD{
     text-align: center;
@@ -55,8 +55,9 @@
 }
 
 .header{
-    background-color: #F4DD8F;
-    color: #324476;
+    font-size: 110%;
+    font-weight: bold;
+    color: black;
     margin: 1px;
     border-radius: 5px;
     height: 25px;
@@ -85,4 +86,5 @@
     overflow-y: scroll;
     flex-direction: column;
     height: 250px;
+    
 }
